@@ -38,10 +38,10 @@ class LandingPage extends Component {
 		const loginContainer = document.getElementById('user-login');
 
 		if (bodyContainer.clientWidth >= 720) {
-			const loginMargin = (bodyContainer.clientHeight - loginContainer.clientHeight -100)/2;
+			const loginMargin = (bodyContainer.clientHeight - loginContainer.clientHeight - 100) / 2;
 			loginContainer.style.marginTop = `${loginMargin}px`;
 		} else {
-			loginContainer.style.marginTop='10px';
+			loginContainer.style.marginTop = '10px';
 		}
 	}
 
@@ -53,7 +53,8 @@ class LandingPage extends Component {
 	}
 
 	onLogin(e) {
-		e.preventDefault();
+		+
+			e.preventDefault();
 		const { triggerLoginUser } = this.props;
 
 		triggerLoginUser(this.userUname.value, this.userPass.value);
@@ -90,31 +91,31 @@ class LandingPage extends Component {
 			{/* <LoadingOverlay fetching={fetching}/> */}
 			<ToastContainer />
 			<section className='transparent-overlay'></section>
-			<br/><br/><br/>
+			<br /><br /><br />
 			{/* <HeaderComponent/><br/> */}
 			<Container fluid>
 				<Row>
 					<Col md={4} sm={3} xs={2}></Col>
-					<Col md={4} sm={6} xs={8}>
+					<Col md={4} sm={6} xs={8} >
 						<p className='text-center'>
 							<h2 className='logo-text'>PluginFactory ReactJS Scaffold</h2>
 						</p>
 						<section className='user-login' id='user-login'>
 							<Form>
 								<FormGroup>
-									<Label for="username">Username</Label><br/>
-									<input ref={userUname => this.userUname = userUname} className='custom-field login-field' placeholder='Username for user'/>
+									<Label for="username">Username</Label><br />
+									<input ref={userUname => this.userUname = userUname} className='custom-field login-field' placeholder='Username for user' />
 								</FormGroup>
 								<FormGroup>
-									<Label for="username">Password</Label><br/>
-									<input ref={userPass => this.userPass = userPass} type='password' className='custom-field login-field' placeholder='Password for user'/>
+									<Label for="username">Password</Label><br />
+									<input ref={userPass => this.userPass = userPass} type='password' className='custom-field login-field' placeholder='Password for user' />
 								</FormGroup>
 								<p className='text-center'>
-									<button className="litnite-btn" onClick={this.onLogin}>LOGIN&nbsp;&nbsp;&nbsp;<FontAwesome name="chevron-right"/></button>
+									<button className="litnite-btn" onClick={this.onLogin}>LOGIN&nbsp;&nbsp;&nbsp;<FontAwesome name="chevron-right" /></button>
 								</p>
 							</Form>
-							<br/><br/><br/>
-							<hr className='line-break'/>
+							<br /><br /><br />
+							<hr className='line-break' />
 							<p className='text-center'>PluginFactory&copy;2019</p>
 						</section>
 					</Col>
@@ -128,7 +129,7 @@ class LandingPage extends Component {
 // handles the outgoing dispatches
 const mapDispatchToProps = dispatch => {
 	return {
-		triggerLoginUser: (email, password) => dispatch(userLogin({email, password}))
+		triggerLoginUser: (email, password) => dispatch(userLogin({ email, password }))
 	};
 }
 

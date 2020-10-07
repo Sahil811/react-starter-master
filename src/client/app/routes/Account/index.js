@@ -22,7 +22,7 @@ class Account extends Component {
 	handleSwitch(e) {
 		const { triggerSwitchNavigation } = this.props;
 		e.preventDefault();
-		const name = e.target.name  || e.target.id;
+		const name = e.target.name || e.target.id;
 		browserHistory.push(`/${name}`);
 		triggerSwitchNavigation(navigationIndexer[name]);
 	}

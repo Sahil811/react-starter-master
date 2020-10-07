@@ -15,6 +15,7 @@ import {
 } from '../../redux/actions';
 import './index.scss';
 
+//
 class ContactUs extends Component {
 
     constructor(props) {
@@ -67,7 +68,7 @@ class ContactUs extends Component {
                 refactoredRequestData.push(instance);
             }
         });
-     console.log(refactoredRequestData);
+        console.log(refactoredRequestData);
         triggerGenericCreateEntity(refactoredRequestData);
     }
 
